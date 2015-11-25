@@ -1,0 +1,39 @@
+[merge]
+	tool = vimdiff
+[user]
+	email = 291400733@qq.com
+	name = sunshine1988
+[alias]
+    d = diff --color
+    dc = diff --color --cached
+    s = status
+    cm = commit -m
+    nc = "!git commit -m \"`date +'%D %T'` normal commit\""
+    co = checkout
+    b = branch
+    l = log -p --color
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    prb = pull --rebase
+[core]
+	excludesfile = /Users/nemo/.gitignore_global
+	quotepath = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = matching
+[color]
+	ui = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[gui]
+    encoding = utf-8
+[i18n]
+    commitencoding = utf-8
+[svn]
+    pathnameencoding = utf-8
